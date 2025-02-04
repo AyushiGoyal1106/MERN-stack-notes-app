@@ -1,0 +1,80 @@
+.homeContainer {
+  background: rgb(148, 187, 233);
+  background: linear-gradient(
+    90deg,
+    rgba(148, 187, 233, 1) 31%,
+    rgba(238, 174, 202, 1) 100%
+  );
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: cursive;
+}
+
+.heading {
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.notesImg {
+  height: 70px;
+  width: 70px;
+  margin-top: 24px;
+  transform: rotate(-10deg);
+  margin-right: 10px;
+}
+
+.createNoteBtn {
+  background: rgb(147, 20, 200);
+  background: linear-gradient(
+    90deg,
+    rgba(147, 20, 200, 1) 31%,
+    rgba(168, 31, 236, 1) 100%
+  );
+  color: white;
+  font-size: 19px;
+  border-radius: 50px;
+  border: none;
+  height: 60px;
+  width: 224px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.homeContentCont {
+  padding: 3rem 6rem;
+}
+
+.notesContainer {
+  height: 200px;
+  width: 60vw;
+  background-color: white;
+  color: black;
+  margin-top: 3rem;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+}
+
+.notesIcon {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+}
+
+.notesTitle {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 20px;
+  font-family: cursive;
+}
+
+.notesContent {
+  padding: 0px 20px 20px 20px;
+}
+
+.noData {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 3rem;
+}
