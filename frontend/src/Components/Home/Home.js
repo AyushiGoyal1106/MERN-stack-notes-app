@@ -116,14 +116,16 @@ function Home() {
   return (
     <div className="homeContainer">
       <div className="homeContentCont">
-        <div className="d-flex">
-          <img src={pink_notes} alt="" className="notesImg" />
-          <div className="heading">Notes</div>
-        </div>
-        <div className="createNoteDiv">
-          <button className="createNoteBtn" onClick={() => setShow(true)}>
-            Create Notes
-          </button>
+        <div className="d-flex justify-content-between">
+          <div className="d-flex">
+            <img src={pink_notes} alt="" className="notesImg" />
+            <div className="heading">Notes</div>
+          </div>
+          <div className="createNoteDiv">
+            <button className="createNoteBtn" onClick={() => setShow(true)}>
+              Create Notes
+            </button>
+          </div>
         </div>
         {data.length !== 0 && (
           <>
@@ -132,22 +134,33 @@ function Home() {
                 <div className="notesTitle">{elem.title}:</div>
                 {elem.content && (
                   <div className="notesContent">
-                    {elem.content.length > 405
+                    {elem.content}
+                    {/* {elem.content.length > 405
                       ? `${elem.content.slice(0, 400)}...${elem.content.slice(
                           elem.content.length - 4,
                           elem.content.length
                         )}`
-                      : elem.content}
+                      : elem.content} */}
                   </div>
                 )}
 
                 <div className="notesIcon">
                   <EditIcon
-                    sx={{ color: "gray" }}
+                    classname="iconClass"
+                    sx={{
+                      color: "gray",
+                      fontSize: { xs: "1rem", sm: "1.5rem", md: "2rem" },
+                      mt: { xs: 2, sm: 0 },
+                    }}
                     onClick={() => handleUpdate(elem)}
                   />
                   <DeleteIcon
-                    sx={{ color: "gray" }}
+                    classname="iconClass"
+                    sx={{
+                      color: "gray",
+                      fontSize: { xs: "1rem", sm: "1.5rem", md: "2rem" },
+                      mt: { xs: 2, sm: 0 },
+                    }}
                     onClick={() => calldelete(elem)}
                   />
                 </div>

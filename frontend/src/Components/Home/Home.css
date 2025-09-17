@@ -25,7 +25,6 @@
 }
 
 .createNoteBtn {
-  background: rgb(147, 20, 200);
   background: linear-gradient(
     90deg,
     rgba(147, 20, 200, 1) 31%,
@@ -46,14 +45,17 @@
 }
 
 .notesContainer {
-  height: 200px;
-  width: 60vw;
+  min-height: 200px;
+  width: 67vw;
   background-color: white;
   color: black;
   margin-top: 3rem;
   border-radius: 10px;
   border: none;
   position: relative;
+  padding: 0px 20px 20px 20px;
+  word-wrap: break-word;
+  /* overflow-wrap: anywhere; */
 }
 
 .notesIcon {
@@ -65,16 +67,99 @@
 .notesTitle {
   font-size: 30px;
   font-weight: 700;
-  padding: 20px;
+  padding: 15px 20px 10px 0px;
   font-family: cursive;
 }
 
 .notesContent {
-  padding: 0px 20px 20px 20px;
+  /* padding: 0px 20px 20px 20px; */
+  overflow-y: hidden;
 }
 
 .noData {
   font-size: 20px;
   text-align: center;
   margin-top: 3rem;
+}
+
+.createNoteDiv {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .notesContainer {
+    min-height: 165px;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .homeContentCont {
+    padding: 1rem 3rem;
+  }
+  .notesImg {
+    height: 55px;
+    width: 50px;
+    margin-top: 13px;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+  .createNoteBtn {
+    font-size: 14px;
+    height: 45px;
+    width: 132px;
+  }
+  .notesContainer {
+    min-height: 120px;
+    margin-top: 1rem;
+    padding: 10px;
+    width: 100%;
+  }
+  .notesTitle {
+    font-size: 20px;
+    padding: 0px 10px 10px 0px;
+  }
+  .notesContent {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homeContentCont {
+    padding: 1rem;
+  }
+  .notesImg {
+    height: 32px;
+    width: 32px;
+    margin-top: 12px;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+  .createNoteBtn {
+    font-size: 11px;
+    height: 32px;
+    width: 100px;
+  }
+  .notesContainer {
+    min-height: 95px;
+    width: 92vw;
+    margin-top: 1rem;
+    padding: 10px;
+  }
+  .notesTitle {
+    font-size: 16px;
+    padding: 0px 8px 8px 0px;
+  }
+  .notesContent {
+    font-size: 10px;
+  }
+  .notesIcon {
+    padding-top: 10px;
+  }
+  .iconClass {
+    padding-top: 10px;
+  }
 }
